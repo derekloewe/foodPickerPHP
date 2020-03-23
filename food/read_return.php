@@ -36,15 +36,15 @@ if($num>0){
         array_push($products_arr["foods"], $food_item);
     }
     //set resposene
-    http_response_code(200);
+    //http_response_code(200);
     //show products
-    echo json_encode($products_arr);
+    return json_encode($products_arr);
 
 }else{
     // set 404
-    http_response_code(404);
+    //http_response_code(404);
 
     // no products found
-    echo json_encode(array("message"=> "No products found"));
+    return json_encode(array("message"=> "No products found"));
 }
 ?>
